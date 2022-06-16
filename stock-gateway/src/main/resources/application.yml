@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: stock-gateway
+  cloud:
+    nacos:
+      discovery.server-addr:  127.0.0.1:8848
+      discovery.service:  stock-gateway
+    gateway:
+      route[0].id: stock-user
+      route[0].uri:lb:  //stock-user
+      route[0].predicates[0]: Path=/**
