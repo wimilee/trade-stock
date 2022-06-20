@@ -12,17 +12,30 @@
         <module>stock-gateway</module>
         <module>stock-user</module>
         <module>mybatis-generator</module>
+        <module>stock-common</module>
+        <module>stock-entity</module>
+        <module>stock-auth</module>
     </modules>
 
     <!-- 自定义属性， 统一管理版本 -->
     <properties>
         <spring.cloud.alibaba.version>2.1.1.RELEASE</spring.cloud.alibaba.version>
         <spring-cloud-gateway.version>2.1.2.RELEASE</spring-cloud-gateway.version>
+        <spring-cloud-starter.version>2.1.1.RELEASE</spring-cloud-starter.version>
+        <druid.version>1.1.18</druid.version>
+        <project.stock.version>1.0.0</project.stock.version>
         <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
+        <swagger.version>2.9.2</swagger.version>
+        <postgresql.version>42.2.5</postgresql.version>
+        <grpc.version>2.5.0.RELEASE</grpc.version>
+        <sharding.jdbc.version>3.1.0</sharding.jdbc.version>
+        <guava.version>20.0</guava.version>
+        <seata.version>0.9.0</seata.version>
+        <xxl.job.version>2.1.0</xxl.job.version>
     </properties>
 
     <dependencies>
@@ -30,7 +43,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
