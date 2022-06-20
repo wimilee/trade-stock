@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:5.7.37
+    container_name: stock-mysql
+    ports:
+      - 3307:3306
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: "1234"
+      MYSQL_DATABASE: "trade_stock"
+      MYSQL_ROOT_HOST: '%'

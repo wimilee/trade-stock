@@ -11,6 +11,7 @@
     <modules>
         <module>stock-gateway</module>
         <module>stock-user</module>
+        <module>mybatis-generator</module>
     </modules>
 
     <!-- 自定义属性， 统一管理版本 -->

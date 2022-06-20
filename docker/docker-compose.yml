@@ -62,6 +62,6 @@ services:
     environment:
         MYSQL_ALLOW_EMPTY_PASSWORD: "true"
         MYSQL_DATABASE: "cat"
-        MYSQL_PASSWORD: ""
+        MYSQL_PASSWORD: "1234"
     networks:
         - cat
