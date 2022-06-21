@@ -18,7 +18,7 @@
     <result column="lastLoginIp" jdbcType="VARCHAR" property="lastLoginIp" />
     <result column="lastLoginTime" jdbcType="TIMESTAMP" property="lastLoginTime" />
     <result column="status" jdbcType="TINYINT" property="status" />
-    <result column="craeteTime" jdbcType="TIMESTAMP" property="craeteTime" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
   <insert id="insert" parameterType="com.wimilee.stock.entity.TTradeUser">
     <!--
@@ -32,11 +32,11 @@
     insert into t_trade_user (userNo, name, userPwd, 
       phone, companyId, email, 
       address, lastLoginIp, lastLoginTime, 
-      status, craeteTime)
+      status, createTime)
     values (#{userNo,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{userPwd,jdbcType=VARCHAR}, 
       #{phone,jdbcType=VARCHAR}, #{companyId,jdbcType=BIGINT}, #{email,jdbcType=VARCHAR}, 
       #{address,jdbcType=VARCHAR}, #{lastLoginIp,jdbcType=VARCHAR}, #{lastLoginTime,jdbcType=TIMESTAMP}, 
-      #{status,jdbcType=TINYINT}, #{craeteTime,jdbcType=TIMESTAMP})
+      #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.wimilee.stock.entity.TTradeUser">
     <!--
@@ -79,8 +79,8 @@
       <if test="status != null">
         status,
       </if>
-      <if test="craeteTime != null">
-        craeteTime,
+      <if test="createTime != null">
+        createTime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -114,8 +114,8 @@
       <if test="status != null">
         #{status,jdbcType=TINYINT},
       </if>
-      <if test="craeteTime != null">
-        #{craeteTime,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>

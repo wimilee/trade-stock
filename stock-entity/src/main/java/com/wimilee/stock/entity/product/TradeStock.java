@@ -102,7 +102,7 @@ public class TradeStock extends BaseEntity {
      * 创建时间
      */
     @ApiModelProperty(value="创建时间")
-    private Date craeteTime;
+    private Date createTime;
 
     /**
      */

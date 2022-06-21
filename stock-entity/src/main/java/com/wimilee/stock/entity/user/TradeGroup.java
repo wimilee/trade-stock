@@ -73,7 +73,7 @@ public class TradeGroup extends BaseEntity {
     /**
      * 创建时间
      */
-    private Date craeteTime;
+    private Date createTime;
 
 
 

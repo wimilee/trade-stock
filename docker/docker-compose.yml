@@ -37,9 +37,9 @@ services:
     #      - "./datasources.xml:/data/appdatas/cat/datasources.xml"
     command: /bin/sh -c './datasources.sh && catalina.sh run'
     links:
-      - mysql
+      - mysql-cat
     depends_on:
-      - mysql
+      - mysql-cat
     ports:
       - "8080:8080"
       - "2280:2280"
@@ -47,7 +47,7 @@ services:
       - cat
 
     # disable this if you have your own mysql
-  mysql:
+  mysql-cat:
     container_name: cat-mysql
     image: mysql:5.7.37
       # expose 3306 to client (navicat)
@@ -65,3 +65,21 @@ services:
         MYSQL_PASSWORD: "1234"
     networks:
         - cat
+
+  mysql-main:
+    image: mysql:5.7.37
+    container_name: stock-mysql
+    ports:
+      - 3307:3306
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: "1234"
+      MYSQL_DATABASE: "trade_stock"
+      MYSQL_ROOT_HOST: '%'
+
+  reids:
+    image: redis:5.0.3-alpine
+    container_name: redis
+    ports:
+      - 6379:6379
+
