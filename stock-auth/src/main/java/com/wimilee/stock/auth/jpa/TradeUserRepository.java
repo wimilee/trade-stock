@@ -1,8 +1,7 @@
 package com.wimilee.stock.auth.jpa;
 
+import com.wimilee.jpa.BaseRepository;
 import com.wimilee.stock.entity.user.TradeUser;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Repository;
  * @link:
  */
 @Repository("tradeUserRepository")
-public interface TradeUserRepository extends PagingAndSortingRepository<TradeUser, Long>, JpaSpecificationExecutor<TradeUser> {
+public interface TradeUserRepository extends BaseRepository<TradeUser,Long> {
 	/**
 	 * 根据用户账户查询用户信息
 	 */

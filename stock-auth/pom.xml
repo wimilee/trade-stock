@@ -90,7 +90,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.14</version>
         </dependency>
 
         <!--freemarker-->
@@ -108,6 +107,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wimilee.stock</groupId>
+            <artifactId>common-dao</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
     </dependencies>

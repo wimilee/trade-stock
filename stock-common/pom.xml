@@ -16,6 +16,7 @@
         <module>common-web</module>
         <module>common-dao</module>
         <module>common-service</module>
+        <module>common-system</module>
     </modules>
 
     <properties>
